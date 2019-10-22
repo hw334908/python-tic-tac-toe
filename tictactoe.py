@@ -144,6 +144,8 @@ while True:
             print("\n" + firstMove + ' will go first!\n\n')
             if firstMove == 'Player 2':
                 playerOneMove = False
+            else:
+                playerOneMove = True
             continue
         else:
             break
