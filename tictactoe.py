@@ -2,6 +2,7 @@
 import random
 
 def display_board(board):
+    print('\n'*100)
     print("   |   |   ")
     print(f" {board[7]} | {board[8]} | {board[9]} ")
     print("   |   |   ")
@@ -110,12 +111,10 @@ while True:
         position = player_choice(board)
         place_marker(board,playerOneLetter,position)
         if win_check(board, playerOneLetter):
-            print('\n'*100)
             display_board(board)
             print("Congrats Player 1! You are the winner!")
             gameOver = True
         if full_board_check(board):
-            print('\n'*100)
             display_board(board)
             print("Board is full. Nobody wins. You both are losers!")
             gameOver = True
@@ -124,12 +123,10 @@ while True:
         position = player_choice(board)
         place_marker(board,playerTwoLetter,position)
         if win_check(board, playerTwoLetter):
-            print('\n'*100)
             display_board(board)
             print("Congrats Player 2! You are the winner!")
             gameOver = True
         if full_board_check(board):
-            print('\n'*100)
             display_board(board)
             print("Board is full. Nobody wins. You both are losers!")
             gameOver = True
@@ -138,7 +135,6 @@ while True:
     if gameOver:
         if replay():
             gameOver = False
-            print('\n'*100)
             board = ['#',' ',' ',' ',' ',' ',' ',' ',' ',' ']
             firstMove = choose_first()
             print("\n" + firstMove + ' will go first!\n\n')
@@ -149,6 +145,5 @@ while True:
             continue
         else:
             break
-    print('\n'*100)
 
 
